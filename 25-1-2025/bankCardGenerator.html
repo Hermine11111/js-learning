@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank Card Generator</title>
+</head>
+<body>
+
+    <h2>Bank Card Generator</h2>
+
+    <!-- Card Type Selector -->
+    <label for="cardType">Select Card Type:</label>
+    <select id="cardType">
+        <option value="standard">Standard</option>
+        <option value="gold">Gold</option>
+        <option value="platinum">Platinum</option>
+    </select>
+
+    <br><br>
+
+    <!-- Button to Generate Card -->
+    <button onclick="generateCard()">Generate Card</button>
+
+    <br><br>
+
+    <!-- Display Generated Card -->
+    <div id="cardDisplay">
+        <h3>Your Bank Card:</h3>
+        <p id="cardNumber">Card Number: </p>
+        <p id="cardHolderName">Cardholder Name: </p>
+        <p id="cardExpiryDate">Expiry Date: </p>
+        <button id="activateButton" style="display:none;" onclick="activateCard()">Activate Card</button>
+        <p id="cardCvv" style="display:none;">CVV: </p> <!-- CVV is hidden initially -->
+    </div>
+
+    <!-- Display Activated Cards Container in the Right Corner -->
+    <div id="activatedCardsContainer" style="position: fixed; top: 10px; right: 10px; display: flex; flex-direction: column; gap: 10px;">
+        <!-- Individual activated cards will be added here -->
+    </div>
+<body>
+  <script src="./bankCardGenerator.js"></script>
+</body>
+</html>
